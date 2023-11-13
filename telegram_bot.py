@@ -4,7 +4,7 @@ from telegram.ext import Updater, MessageHandler, Filters
 import re
 from main import parse_trendyol_product
 
-bot = telegram.Bot(token='6681043404:AAEL0YLg_mj2QmJ_kK08mZUmS8vFbDOJSPw')
+bot = telegram.Bot(token='BOT_TOKEN')
 
 def parse_trendyol_link(link):
     images = parse_trendyol_product(link)
