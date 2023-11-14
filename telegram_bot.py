@@ -12,7 +12,7 @@ def parse_trendyol_link(link):
 
 def handle_message(update, context):
     message = update.message.text
-    if re.match(r'^https://www.trendyol.com/', message):
+    if re.match(r'^https://www.trendyol.com/', message) or re.match(r'^https://ty.gl/', message):
         images = parse_trendyol_link(message)
         for image in images:
             context.bot.send_photo(chat_id=update.effective_chat.id, photo=image)
